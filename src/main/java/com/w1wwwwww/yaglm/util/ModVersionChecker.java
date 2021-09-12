@@ -1,6 +1,6 @@
-package com.w1wwwwww.yaglm.utilites;
+package com.w1wwwwww.yaglm.util;
 
-import com.w1wwwwww.yaglm.config.ModConfig;
+import com.w1wwwwww.yaglm.config.ConfigScreen;
 import me.shedaniel.autoconfig.AutoConfig;
 
 import java.net.HttpURLConnection;
@@ -8,11 +8,18 @@ import java.net.URL;
 import java.util.Objects;
 
 public class ModVersionChecker {
-    public static String CheckForUpdatedModVersions() {
-        String isInternetAvailable = getStatus();
-        ModConfig config = AutoConfig.getConfigHolder(ModConfig.class).getConfig();
+    ConfigScreen config = AutoConfig.getConfigHolder(ConfigScreen.class).getConfig();
 
-        if(config.equals())
+    public String CheckForUpdatedModVersions() {
+        if (Objects.equals(getStatus(), "On")) {
+            if (config.autoCheckForUpdates) {
+                return "Updating";
+            } else {
+                return "Auto updates are disables";
+            }
+        } else {
+            return "Internet not available";
+        }
     }
 
     private static String getStatus() {
