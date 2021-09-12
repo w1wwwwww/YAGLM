@@ -11,18 +11,18 @@ public class ModVersionChecker {
     ConfigScreen config = AutoConfig.getConfigHolder(ConfigScreen.class).getConfig();
 
     public String CheckForUpdatedModVersions() {
-        if (Objects.equals(getStatus(), "On")) {
+        if (Objects.equals(getInternetStatus(), "On")) {
             if (config.autoCheckForUpdates) {
                 return "Updating";
             } else {
-                return "Auto updates are disables";
+                return "Auto updates are disabled";
             }
         } else {
             return "Internet not available";
         }
     }
 
-    private static String getStatus() {
+    private static String getInternetStatus() {
 
         String result = "";
         try {
