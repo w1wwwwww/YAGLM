@@ -1,4 +1,6 @@
 {
-  "text.autoconfig.yaglm.option.autoCheckForUpdates": "Automatically Check For Updates",
+  "text.autoconfig.yaglm.option.autoCheckForUpdates": "Automatically check for updates",
+  "text.autoconfig.yaglm.option.hasBeenSetup": "secret option",
+  "text.autoconfig.yaglm.option.internetUrl": "Address not blocked in your country",
   "text.autoconfig.yaglm.title": "Configure YAGLM"
 }

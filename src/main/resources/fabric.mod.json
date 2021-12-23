@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "yaglm",
-  "version": "${version}",
+  "version": "0.1",
 
   "name": "YAGLM",
   "description": "YAGLM is the library mod used by my other minecraft mods",
@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://github.com/w1wwwwww",
-    "sources": "https://github.com/w1wwwwww/YAGLM"
+    "sources": "https://github.com/w1wwwwww/YAGLM",
+    "issues": "https://github.com/w1wwwwww/YAGLM/issues"
   },
 
   "license": "LGPL-3.0",
@@ -19,7 +20,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.w1wwwwww.yaglm.Main"
+      "com.w1wwwwww.yaglm.YAGLM"
     ],
     "modmenu": [
       "com.w1wwwwww.yaglm.config.ModMenuIntegration"
@@ -29,10 +30,10 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16",
-    "modmenu": "2.0.10",
-    "cloth-config2": "5.0.38"
+    "minecraft": "1.18.x",
+    "java": ">=17",
+    "modmenu": ">=3.0.1",
+    "cloth-config2": ">=6.1.48"
   },
 
   "custom": {
